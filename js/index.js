@@ -6,6 +6,7 @@ const answerBtn = document.querySelector('.submit-answer');
 const modalWindow = document.querySelector('.modal-window');
 const textModalWindow = document.querySelector('.answer-message');
 const nextButton = document.querySelector('.next-button');
+const roundNumber = document.querySelector('.round-number');
 
 let correctAnswer = 0;
 let playerResponse;
@@ -41,12 +42,11 @@ function randomOperator() {
 
 function result(num1, num2, operator) {
     if (operator.innerText == '+') {
-        
         correctAnswer = Number(num1.innerText) + Number(num2.innerText);
-        // answer.value = correctAnswer;
+        console.log(correctAnswer);
     }else if (operator.innerText == '-') {
         correctAnswer = Number(num1.innerText) - Number(num2.innerText);
-        // answer.value = correctAnswer;
+        console.log(correctAnswer);
     }
 }
 
@@ -61,11 +61,26 @@ function checkResponse() {
         textModalWindow.innerText = correctResponse.text;
         textModalWindow.style.color = correctResponse.colorText;
         nextButton.innerText = correctResponse.textBtn;
+        counterRound();
     } else {
         modalWindow.classList.add('modal-window_active');
         modalWindow.classList.add('modal-window_active');
         textModalWindow.innerText = incorrectResponse.text;
         textModalWindow.style.color = incorrectResponse.colorText;
         nextButton.innerText = incorrectResponse.textBtn;
+        roundNumber.innerText = '1';
     }
 }
+
+function counterRound() {
+    roundNumber.innerText++;
+}
+
+nextButton.addEventListener('click', function() {
+    modalWindow.classList.remove('modal-window_active');
+    randomNumbers();
+    randomOperator();
+    answer.value = '';
+    answer.focus();
+    result(number1, number2, operator);
+})

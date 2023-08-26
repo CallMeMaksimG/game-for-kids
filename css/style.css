@@ -15,6 +15,9 @@ html, body {
     height: 100%;
     
 }
+input {
+    outline:none;
+}
 
 .wrapper{
     min-height: 100vh;
@@ -35,7 +38,7 @@ html, body {
     /* border: 1px solid black; */
 }
 
-.round-number {
+.round-text, round-number {
     font-size: 60px;
     color: cornflowerblue;
     font-family: 'Unbounded', sans-serif;
