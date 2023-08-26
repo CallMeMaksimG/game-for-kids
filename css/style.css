@@ -70,7 +70,7 @@ html, body {
     color: rgb(254, 254, 202);
 }
 
-.submit {
+.submit-answer {
     font-family: 'Kablammo', cursive;
     font-size: 50px;
     padding: 10px 60px;
@@ -85,7 +85,11 @@ html, body {
     border-radius: 30px;
 }
 
-.submit:hover {
+.submit-answer:hover {
     background: yellow;
     color: mediumseagreen;
+}
+
+.submit-answer:active {
+    padding: 15px 75px;
 }
