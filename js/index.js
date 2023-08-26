@@ -7,6 +7,10 @@ const modalWindow = document.querySelector('.modal-window');
 const textModalWindow = document.querySelector('.answer-message');
 const nextButton = document.querySelector('.next-button');
 const roundNumber = document.querySelector('.round-number');
+const record = document.querySelector('.record-number');
+
+record.innerText = localStorage.getItem('record');
+
 
 let correctAnswer = 0;
 let playerResponse;
@@ -72,6 +76,7 @@ function checkResponse() {
 
 function counterRound() {
     roundNumber.innerText++;
+    saveRecord();
 }
 
 nextButton.addEventListener('click', function() {
@@ -82,3 +87,10 @@ nextButton.addEventListener('click', function() {
     answer.focus();
     result(number1, number2, operator);
 })
+
+function saveRecord() {
+    if (roundNumber.innerText > record.innerText) {
+        record.innerText = roundNumber.innerText;
+        localStorage.setItem('record', record.innerText);
+    }
+}

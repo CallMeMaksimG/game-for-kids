@@ -136,3 +136,11 @@ input {
 .next-button:active {
     background: #00333e;
 }
+
+.record {
+    position: absolute;
+    bottom: 40px;
+    font-size: 30px;
+    font-family: 'Unbounded', sans-serif;
+    color: rgb(33, 221, 16);
+}
