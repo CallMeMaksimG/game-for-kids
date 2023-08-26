@@ -3,9 +3,23 @@ const number2 = document.querySelector('.number2');
 const operator = document.querySelector('.operator1');
 const answer = document.querySelector('.answer');
 const answerBtn = document.querySelector('.submit-answer');
+const modalWindow = document.querySelector('.modal-window');
+const textModalWindow = document.querySelector('.answer-message');
+const nextButton = document.querySelector('.next-button');
 
 let correctAnswer = 0;
 let playerResponse;
+
+const correctResponse = {
+    text: 'Правильный ответ! Молодец!',
+    colorText: 'rgb(70, 130, 180)',
+    textBtn: 'Продолжить'
+};
+const incorrectResponse = {
+    text: 'Неправильно :(',
+    colorText: '#FD694B',
+    textBtn: 'Новая игра'
+};
 
 randomNumbers();
 randomOperator();
@@ -43,8 +57,15 @@ answerBtn.addEventListener('click', function saveResponsePlayer() {
 
 function checkResponse() {
     if (Number(playerResponse) == correctAnswer) {
-        console.log("Верно!")
+        modalWindow.classList.add('modal-window_active');
+        textModalWindow.innerText = correctResponse.text;
+        textModalWindow.style.color = correctResponse.colorText;
+        nextButton.innerText = correctResponse.textBtn;
     } else {
-        console.log("Неверно:(")
+        modalWindow.classList.add('modal-window_active');
+        modalWindow.classList.add('modal-window_active');
+        textModalWindow.innerText = incorrectResponse.text;
+        textModalWindow.style.color = incorrectResponse.colorText;
+        nextButton.innerText = incorrectResponse.textBtn;
     }
 }

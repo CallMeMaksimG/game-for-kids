@@ -93,3 +93,47 @@ html, body {
 .submit-answer:active {
     padding: 15px 75px;
 }
+
+.modal-window {
+    display: none;
+    height: 450px;
+    width: 850px;
+    border: 25px solid orangered;
+    border-radius: 40px;
+    position: absolute;
+    background-color: white;
+    padding: 60px 20px;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.modal-window_active {
+    display: flex;
+}
+
+.answer-message {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Unbounded', sans-serif;
+    color: steelblue;
+}
+
+.next-button {
+    margin: 0 auto;
+    font-size: 50px;
+    padding: 10px 40px;
+    font-family: 'Unbounded', sans-serif;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: #015366;
+    border-radius: 10px;
+}
+
+.next-button:hover {
+    opacity: .8;
+}
+
+.next-button:active {
+    background: #00333e;
+}
