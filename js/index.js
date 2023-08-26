@@ -43,10 +43,8 @@ function randomOperator() {
 function result(num1, num2, operator) {
     if (operator.innerText == '+') {
         correctAnswer = Number(num1.innerText) + Number(num2.innerText);
-        console.log(correctAnswer);
     }else if (operator.innerText == '-') {
         correctAnswer = Number(num1.innerText) - Number(num2.innerText);
-        console.log(correctAnswer);
     }
 }
 

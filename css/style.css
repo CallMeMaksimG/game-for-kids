@@ -35,7 +35,6 @@ input {
     max-width: 90vh;
     display: flex;
     gap: 50px;
-    /* border: 1px solid black; */
 }
 
 .round-text, round-number {
@@ -78,9 +77,6 @@ input {
     font-size: 50px;
     padding: 10px 60px;
     height: 150px;
-    /* position: absolute;
-    top: 0;
-    transform: translateY(390%); */
     cursor: pointer;
     background-color:mediumseagreen;
     color: yellow;
