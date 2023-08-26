@@ -90,7 +90,7 @@ nextButton.addEventListener('click', function() {
 })
 
 function saveRecord() {
-    if (roundNumber.innerText > record.innerText) {
+    if (Number(roundNumber.innerText) > Number(record.innerText)) {
         record.innerText = roundNumber.innerText;
         localStorage.setItem('record', record.innerText);
     }
