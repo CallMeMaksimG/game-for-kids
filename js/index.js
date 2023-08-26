@@ -8,6 +8,7 @@ const textModalWindow = document.querySelector('.answer-message');
 const nextButton = document.querySelector('.next-button');
 const roundNumber = document.querySelector('.round-number');
 const record = document.querySelector('.record-number');
+const updateBtn = document.querySelector('.update__img');
 
 record.innerText = localStorage.getItem('record');
 
@@ -94,3 +95,7 @@ function saveRecord() {
         localStorage.setItem('record', record.innerText);
     }
 }
+
+updateBtn.addEventListener('click', function(){
+    location.reload();
+})

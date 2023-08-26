@@ -144,3 +144,15 @@ input {
     font-family: 'Unbounded', sans-serif;
     color: rgb(33, 221, 16);
 }
+
+.update__img {
+    position: absolute;
+    width: 70px;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.update__img:hover {
+    transform: rotate(30deg);
+}
