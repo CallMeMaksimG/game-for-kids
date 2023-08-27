@@ -5,3 +5,5 @@
 - JS;
 - HTML5;
 - CSS.
+
+[Открыть игру](https://callmemaksimg.github.io/game-for-kids/)
